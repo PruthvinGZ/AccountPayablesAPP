@@ -1,0 +1,60 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Payables Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main-container">
+        <header class="company-header">
+            <h1 class="company-name">Gestion Zagora & Black Ridge</h1>
+            <p class="department-name">Account Payables Management System</p>
+        </header>
+
+        <div class="content-wrapper">
+            <section class="upload-section">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="file-input-container">
+                        <div class="file-input-group">
+                            <div class="file-label">
+                                <span>Account Payables</span>
+                                <input type="file" class="form-control" id="accountPayables" accept=".xlsx" required>
+                            </div>
+                        </div>
+
+                        <div class="file-input-group">
+                            <div class="file-label">
+                                <span>Bank Balance</span>
+                                <input type="file" class="form-control" id="bankBalance" accept=".xlsx" required>
+                            </div>
+                        </div>
+
+                        <div class="file-input-group">
+                            <div class="file-label">
+                                <span>Cash Management</span>
+                                <input type="file" class="form-control" id="cashManagement" accept=".xlsx" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn-custom" onclick="uploadFiles()">Process Files</button>
+                        <button type="button" class="btn-secondary" onclick="openProcessedFolder()">View Results</button>
+                    </div>
+                </form>
+
+                <div id="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                
+                <div id="status"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}" defer></script>
+</body>
+</html>
