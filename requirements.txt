@@ -1,0 +1,20 @@
+# Core Libraries
+numpy
+pandas
+datetime
+
+# Excel Processing
+xlsxwriter
+xlwings
+openpyxl
+
+# Type Hinting (Optional, but useful)
+typing-extensions
+
+# Flask (Web Framework)
+flask
+
+# Logging
+logging
+typing-extensions
+
